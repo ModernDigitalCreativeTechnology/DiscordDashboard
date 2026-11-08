@@ -161,7 +161,7 @@ async function load(){
   try {
     if (!CONFIG.DATA_URL){ last = demo(); $("foot").textContent = "Mode demo: isi CONFIG.DATA_URL di index.html untuk data asli."; }
     else {
-      const res = await fetch(CONFIG.DATA_URL + (CONFIG.DATA_URL.includes("?") ? "&" : "?") + "_=" + Date.now(), { headers: CONFIG.HEADERS, cache:"no-store" });
+      const res = await fetch(CONFIG.DATA_URL, { headers: CONFIG.HEADERS, cache:"no-store" });
       if (!res.ok) throw new Error("HTTP " + res.status);
       last = normalize(await res.json());
     }
