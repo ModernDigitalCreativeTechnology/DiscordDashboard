@@ -81,9 +81,9 @@ const CONFIG = {
   // URL JSON status bot. Kosongkan = mode demo (data palsu).
   // Contoh Gist : "https://gist.githubusercontent.com/USER/ID/raw/status.json"
   // Contoh Supabase: "https://XXXX.supabase.co/rest/v1/bot_status?select=*&order=updated_at.desc&limit=1"
-  DATA_URL: "",
+  DATA_URL: "https://kgupwuinbzlehopvvntu.supabase.co/rest/v1/bot_status?select=*&id=eq.1",
   // Header tambahan. Untuk Supabase isi anon key (aman dipublish, JANGAN service key).
-  HEADERS: {},
+  HEADERS: { apikey: "sb_publishable_It2zKEHriV_E_tDAUFoG4Q_gKU_tSRu" },
   REFRESH_MS: 10000,      // seberapa sering halaman cek data
   OFFLINE_AFTER_S: 90     // kalau data lebih tua dari ini → dianggap offline
 };
